@@ -21,3 +21,25 @@
   "theme_color": "#2196f3",
   "orientation": "portrait-primary"
 }
+{
+  "short_name": "MyPWA",
+  "name": "My App",
+  "icons": [
+    {
+      "src": "https://via.placeholder.com/192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://via.placeholder.com/512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/manageAlsb/index.html",
+  "scope": "/manageAlsb/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2196f3"
+}
