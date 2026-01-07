@@ -1,49 +1,10 @@
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My PWA App</title>
-    <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#2196f3">
-    
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f2f5;
-        }
-        .container {
-            text-align: center;
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        h1 { color: #2196f3; }
-        p { color: #666; }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Ứng dụng PWA của tôi</h1>
-        <p>Nếu bạn thấy nút "Cài đặt" trên thanh địa chỉ, có nghĩa là PWA đang hoạt động!</p>
-        <p>Cửa sổ này sẽ không có thanh địa chỉ khi được mở từ shortcut.</p>
-    </div>
-
-    <script>
-        // Đăng ký Service Worker để trình duyệt công nhận là PWA
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('./sw.js')
-                    .then(reg => console.log('Service Worker đã đăng ký!', reg))
-                    .catch(err => console.log('Lỗi đăng ký SW:', err));
-            });
-        }
-    </script>
-</body>
-</html>
+<script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            // Thêm dấu chấm phía trước để xác định thư mục hiện tại
+            navigator.serviceWorker.register('./sw.js')
+                .then(reg => console.log('SW Registered'))
+                .catch(err => console.log('SW Error:', err));
+        });
+    }
+</script>
